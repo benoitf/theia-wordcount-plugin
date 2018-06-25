@@ -1,0 +1,28 @@
+{
+  "name": "theia-statusbar-plugin-plugin",
+  "publisher": "theia",
+  "keywords": [
+    "theia-plugin"
+  ],
+  "version": "0.0.1",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@theia/plugin": "next",
+    "@wiptheia/plugin-package": "latest",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.8.1"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc"
+  },
+  "engines": {
+    "theiaPlugin": "latest"
+  },
+  "theiaPlugin": {
+    "backend": "lib/theia-statusbar-plugin-backend-plugin.js"
+  }
+}
